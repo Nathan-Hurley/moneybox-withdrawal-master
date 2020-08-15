@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Moneybox.App">
+      <HintPath>..\Moneybox.App\bin\Debug\netcoreapp2.0\Moneybox.App.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
