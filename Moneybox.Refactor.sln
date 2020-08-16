@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Moneybox.App", "Moneybox.App\Moneybox.App.csproj", "{C1E5082E-45D6-469C-BD08-B87348851443}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moneybox.Web", "Moneybox.Web\Moneybox.Web.csproj", "{B97FA1A2-F7D9-4FF7-80B5-D7898A526B40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moneybox.UnitTest", "Moneybox.UnitTest\Moneybox.UnitTest.csproj", "{CA3F1E88-D504-459B-AC30-3846178EF211}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{C1E5082E-45D6-469C-BD08-B87348851443}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1E5082E-45D6-469C-BD08-B87348851443}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1E5082E-45D6-469C-BD08-B87348851443}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B97FA1A2-F7D9-4FF7-80B5-D7898A526B40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B97FA1A2-F7D9-4FF7-80B5-D7898A526B40}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B97FA1A2-F7D9-4FF7-80B5-D7898A526B40}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B97FA1A2-F7D9-4FF7-80B5-D7898A526B40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA3F1E88-D504-459B-AC30-3846178EF211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA3F1E88-D504-459B-AC30-3846178EF211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA3F1E88-D504-459B-AC30-3846178EF211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA3F1E88-D504-459B-AC30-3846178EF211}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

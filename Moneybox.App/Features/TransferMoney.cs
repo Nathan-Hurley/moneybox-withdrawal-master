@@ -17,8 +17,8 @@ namespace Moneybox.App.Features
 
         public void Execute(Guid fromAccountId, Guid toAccountId, decimal amount)
         {
-            var from = this.accountRepository.GetAccountById(fromAccountId);
-            var to = this.accountRepository.GetAccountById(toAccountId);
+            var from = accountRepository.GetAccountById(fromAccountId);
+            var to = accountRepository.GetAccountById(toAccountId);
 
             var fromBalance = from.Balance - amount;
             if (fromBalance < 0m)
@@ -28,7 +28,7 @@ namespace Moneybox.App.Features
 
             if (fromBalance < 500m)
             {
-                this.notificationService.NotifyFundsLow(from.User.Email);
+                notificationService.NotifyFundsLow(from.User.Email);
             }
 
             var paidIn = to.PaidIn + amount;
@@ -39,7 +39,7 @@ namespace Moneybox.App.Features
 
             if (Account.PayInLimit - paidIn < 500m)
             {
-                this.notificationService.NotifyApproachingPayInLimit(to.User.Email);
+                notificationService.NotifyApproachingPayInLimit(to.User.Email);
             }
 
             from.Balance -= amount;
@@ -48,8 +48,8 @@ namespace Moneybox.App.Features
             to.Balance += amount;
             to.PaidIn += amount;
 
-            this.accountRepository.Update(from);
-            this.accountRepository.Update(to);
+            accountRepository.Update(from);
+            accountRepository.Update(to);
         }
     }
 }

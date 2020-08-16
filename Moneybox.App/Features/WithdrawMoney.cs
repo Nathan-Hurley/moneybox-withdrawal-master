@@ -25,6 +25,11 @@ namespace Moneybox.App.Features
                 throw new InvalidOperationException("Insufficient funds to withdraw");
 			}
 
+            if (fromBalance < 500m)
+            {
+                notificationService.NotifyFundsLow(from.User.Email);
+            }
+
             from.Balance -= amount;
             from.Withdrawn -= amount;
 
