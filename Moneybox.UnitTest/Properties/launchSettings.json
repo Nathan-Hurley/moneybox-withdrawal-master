@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Moneybox.UnitTest": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
