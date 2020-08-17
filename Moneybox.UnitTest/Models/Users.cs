@@ -7,11 +7,11 @@ namespace Moneybox.UnitTest.Models
 {
 	public static class Users
 	{
-		public static User CreateNewUser()
+		public static User CreateUser()
 		{
 			return new User()
 			{
-				Email = "nathan.hurley@hotmail.co.uk",
+				Email = "nh@hotmail.co.uk",
 				Id = Guid.NewGuid(),
 				Name = "Nathan"
 			};

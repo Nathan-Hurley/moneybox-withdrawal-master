@@ -7,12 +7,12 @@ namespace Moneybox.UnitTest.Models
 {
 	public static class Accounts
 	{
-		public static Account CreateNewAccount(User user)
+		public static Account CreateNewAccount(User user, Guid guid)
 		{
 			return new Account()
 			{
 				Balance = 1000m,
-				Id = Guid.NewGuid(),
+				Id = guid,
 				PaidIn = 0m,
 				User = user,
 				Withdrawn = 0m

@@ -1,4 +1,5 @@
 ﻿using Moneybox.App.DataAccess;
+using Moneybox.App.Domain;
 using Moneybox.App.Domain.Services;
 using System;
 
@@ -17,23 +18,10 @@ namespace Moneybox.App.Features
 
         public void Execute(Guid fromAccountId, decimal amount)
         {
-            var from = this.accountRepository.GetAccountById(fromAccountId);
+            var from = accountRepository.GetAccountById(fromAccountId);
 
-            var fromBalance = from.Balance - amount;
-            if (fromBalance < 0m)
-			{
-                throw new InvalidOperationException("Insufficient funds to withdraw");
-			}
-
-            if (fromBalance < 500m)
-            {
-                notificationService.NotifyFundsLow(from.User.Email);
-            }
-
-            from.Balance -= amount;
-            from.Withdrawn -= amount;
-
-            this.accountRepository.Update(from);
+            AccountRepository.ValidateFromAccount(from, amount, notificationService);
+            AccountRepository.UpdateFromAccount(from, amount, accountRepository);
         }
     }
 }
